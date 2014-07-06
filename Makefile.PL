@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "# AUTHORITY",
+  "ABSTRACT" => "Very shorthand syntax for bulk lazy builders",
   "AUTHOR" => "Kent Fredric <kentfredric\@gmail.com>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"

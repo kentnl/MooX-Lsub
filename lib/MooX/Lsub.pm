@@ -7,7 +7,7 @@ package MooX::Lsub;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT:
+# ABSTRACT: Very shorthand syntax for bulk lazy builders
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-MooX::Lsub - # AUTHORITY
+MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 =head1 VERSION
 

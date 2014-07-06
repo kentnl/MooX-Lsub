@@ -1,5 +1,5 @@
 NAME
-    MooX::Lsub - # AUTHORITY
+    MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 VERSION
     version 0.001000

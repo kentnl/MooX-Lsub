@@ -1,5 +1,5 @@
 ---
-abstract: '# AUTHORITY'
+abstract: 'Very shorthand syntax for bulk lazy builders'
 author:
   - 'Kent Fredric <kentfredric@gmail.com>'
 build_requires:
