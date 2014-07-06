@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "MooX-LSub",
+   "name" : "MooX-Lsub",
    "prereqs" : {
       "configure" : {
          "recommends" : {
@@ -92,7 +92,7 @@
             "CPAN::Meta" : "0",
             "CPAN::Meta::Requirements" : "2.120900",
             "ExtUtils::MakeMaker" : "6.98",
-            "Test::More" : "0.99_01"
+            "Test::More" : "1.001003"
          },
          "requires" : {
             "ExtUtils::MakeMaker" : "0",
@@ -105,7 +105,7 @@
    },
    "provides" : {
       "MooX::LSub" : {
-         "file" : "lib/MooX/LSub.pm",
+         "file" : "lib/MooX/Lsub.pm",
          "version" : "0.001000"
       }
    },
@@ -178,7 +178,7 @@
          "Test::CPAN::Changes" : "0.28",
          "Test::CPAN::Meta" : "0.23",
          "Test::Kwalitee" : "1.18",
-         "Test::More" : "0.99_01",
+         "Test::More" : "1.001003",
          "Test::Pod" : "1.48",
          "Test::Pod::Coverage" : "1.08",
          "strict" : "1.08",
@@ -344,7 +344,7 @@
             "config" : {
                "Dist::Zilla::Plugin::Test::Compile::PerFile" : {
                   "file" : [
-                     "lib/MooX/LSub.pm"
+                     "lib/MooX/Lsub.pm"
                   ],
                   "path_translator" : "base64_filter",
                   "prefix" : "t/00-compile",

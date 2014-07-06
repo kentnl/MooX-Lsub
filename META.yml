@@ -16,10 +16,10 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: '1.4'
-name: MooX-LSub
+name: MooX-Lsub
 provides:
   MooX::LSub:
-    file: lib/MooX/LSub.pm
+    file: lib/MooX/Lsub.pm
     version: '0.001000'
 requires:
   Moo: '0'
@@ -88,7 +88,7 @@ x_BuiltWith:
     Test::CPAN::Changes: '0.28'
     Test::CPAN::Meta: '0.23'
     Test::Kwalitee: '1.18'
-    Test::More: 0.99_01
+    Test::More: '1.001003'
     Test::Pod: '1.48'
     Test::Pod::Coverage: '1.08'
     strict: '1.08'
@@ -218,7 +218,7 @@ x_Dist_Zilla:
       config:
         Dist::Zilla::Plugin::Test::Compile::PerFile:
           file:
-            - lib/MooX/LSub.pm
+            - lib/MooX/Lsub.pm
           path_translator: base64_filter
           prefix: t/00-compile
           skip: []

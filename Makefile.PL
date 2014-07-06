@@ -15,10 +15,10 @@ my %WriteMakefileArgs = (
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => "6.30"
   },
-  "DISTNAME" => "MooX-LSub",
+  "DISTNAME" => "MooX-Lsub",
   "EXE_FILES" => [],
   "LICENSE" => "perl",
-  "NAME" => "MooX::LSub",
+  "NAME" => "MooX::Lsub",
   "PREREQ_PM" => {
     "Moo" => 0,
     "strict" => 0,
