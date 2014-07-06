@@ -17,6 +17,11 @@ perlcritic.deps
 perlcritic.rc
 t/00-compile/lib_MooX_Lsub_pm.t
 t/00-report-prereqs.t
+t/01-basic-moo.t
+t/02-basic-moose.t
+t/03-basic-moose-immute.t
+t/04-clean-ns.t
+t/05-autoclean-ns.t
 weaver.ini
 xt/author/critic.t
 xt/release/cpan-changes.t

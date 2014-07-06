@@ -4,6 +4,33 @@ NAME
 VERSION
     version 0.001000
 
+SYNOPSIS
+      use MooX::Lsub;
+
+      # Shorthand for
+      # has foo => ( is => ro =>, lazy => 1, builder => sub { "Hello" });
+
+      lsub foo => sub { "Hello" };
+
+DESCRIPTION
+    I often want to use a lot of lazy build subs to implement some plumbing,
+    with scope to allow it to be overridden by people who know what they're
+    doing with an injection library like Bread::Board.
+
+    Usually, the syntax of "Class::Tiny" is what I use for such things.
+
+      use Class::Tiny {
+        'a' => sub { },
+        'b' => sub { },
+      };
+
+    Etc.
+
+    But switching things to Moo means I usually have to get much uglier, and
+    repeat myself a *lot*.
+
+    So this module exists as a compromise.
+
 AUTHOR
     Kent Fredric <kentfredric@gmail.com>
 

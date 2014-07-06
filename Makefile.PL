@@ -20,6 +20,7 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "MooX::Lsub",
   "PREREQ_PM" => {
+    "Eval::Closure" => 0,
     "Moo" => 0,
     "strict" => 0,
     "utf8" => 0,
@@ -30,6 +31,7 @@ my %WriteMakefileArgs = (
     "File::Spec::Functions" => 0,
     "List::Util" => 0,
     "Test::More" => "0.89",
+    "Test::Requires" => 0,
     "version" => 0
   },
   "VERSION" => "0.001000",
@@ -40,11 +42,13 @@ my %WriteMakefileArgs = (
 
 
 my %FallbackPrereqs = (
+  "Eval::Closure" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec::Functions" => 0,
   "List::Util" => 0,
   "Moo" => 0,
   "Test::More" => "0.89",
+  "Test::Requires" => 0,
   "strict" => 0,
   "utf8" => 0,
   "version" => 0,

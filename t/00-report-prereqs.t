@@ -109,6 +109,7 @@ my $static_prereqs = do { my $x = {
                     },
        'runtime' => {
                       'requires' => {
+                                      'Eval::Closure' => '0',
                                       'Moo' => '0',
                                       'perl' => '5.008',
                                       'strict' => '0',
@@ -128,6 +129,7 @@ my $static_prereqs = do { my $x = {
                                    'File::Spec::Functions' => '0',
                                    'List::Util' => '0',
                                    'Test::More' => '0.89',
+                                   'Test::Requires' => '0',
                                    'version' => '0'
                                  }
                  }

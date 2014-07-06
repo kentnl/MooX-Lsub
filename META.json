@@ -80,6 +80,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Eval::Closure" : "0",
             "Moo" : "0",
             "perl" : "5.008",
             "strict" : "0",
@@ -99,6 +100,7 @@
             "File::Spec::Functions" : "0",
             "List::Util" : "0",
             "Test::More" : "0.89",
+            "Test::Requires" : "0",
             "version" : "0"
          }
       }
@@ -170,6 +172,7 @@
          "Dist::Zilla::Plugin::UploadToCPAN" : "5.019",
          "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.016001",
          "Dist::Zilla::PluginBundle::Author::KENTNL::Lite" : "1.7.2",
+         "Eval::Closure" : "0.11",
          "ExtUtils::MakeMaker" : "6.98",
          "File::Spec::Functions" : "3.48",
          "List::Util" : "1.39",
@@ -181,6 +184,7 @@
          "Test::More" : "1.001003",
          "Test::Pod" : "1.48",
          "Test::Pod::Coverage" : "1.08",
+         "Test::Requires" : "0.07",
          "strict" : "1.08",
          "utf8" : "1.14",
          "version" : "0.9908",
