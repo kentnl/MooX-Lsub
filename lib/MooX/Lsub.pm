@@ -43,6 +43,10 @@ use Moo;
 
 
 
+
+
+
+
 use Eval::Closure;
 
 sub _get_sub {
@@ -86,6 +90,12 @@ sub _make_lsub {
   $code .= q[ my ( $subname, $sub , @extras ) = @_; ] . $nl;
   $code .= q[ if ( @extras ) { ] . $nl;
   $code .= q[   die "Too many arguments to 'lsub'. Did you misplace a ';'?"; ] . $nl;
+  $code .= q[ } ] . $nl;
+  $code .= q[ if ( not defined $subname or not length $subname or ref $subname ) { ] . $nl;
+  $code .= q[   die "Subname must be defined + length + not a ref"; ] . $nl;
+  $code .= q[ } ] . $nl;
+  $code .= q[ if ( not 'CODE' eq ref $sub ) { ] . $nl;
+  $code .= q[   die "Sub must be a CODE ref"; ] . $nl;
   $code .= q[ } ] . $nl;
   $code .= q[ $class->_set_sub($target, "_build_" . $subname , $sub ); ] . $nl;
   $code .= q[ package ] . $options->{'target'} . q[; ] . $nl;
@@ -147,6 +157,10 @@ Etc.
 But switching things to Moo means I usually have to get much uglier, and repeat myself a *lot*.
 
 So this module exists as a compromise.
+
+Additionally, I always forgot to declare C<use Moo 1.000008> which was the first version of C<Moo> where C<< builder => sub >> worked, and I would invariably get silly test failures in smokers as a consequence.
+
+This module avoids such problem entirely, and is tested to work with C<Moo 0.009001>.
 
 =head1 AUTHOR
 
