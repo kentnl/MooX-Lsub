@@ -3,11 +3,11 @@ use strict;
 use warnings;
 use utf8;
 
-package MooX::LSub;
+package MooX::Lsub;
 
 our $VERSION = '0.001000';
 
-# ABSTRACT:
+# ABSTRACT: Very shorthand syntax for bulk lazy builders
 
 # AUTHORITY
 

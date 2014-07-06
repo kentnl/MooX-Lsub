@@ -1,6 +1,6 @@
 # NAME
 
-MooX::LSub - # AUTHORITY
+MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 # VERSION
 
