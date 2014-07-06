@@ -112,13 +112,13 @@
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "https://github.com/kentfredric/MooX-LSub/issues"
+         "web" : "https://github.com/kentfredric/MooX-Lsub/issues"
       },
-      "homepage" : "https://github.com/kentfredric/MooX-LSub",
+      "homepage" : "https://github.com/kentfredric/MooX-Lsub",
       "repository" : {
          "type" : "git",
-         "url" : "https://github.com/kentfredric/MooX-LSub.git",
-         "web" : "https://github.com/kentfredric/MooX-LSub"
+         "url" : "https://github.com/kentfredric/MooX-Lsub.git",
+         "web" : "https://github.com/kentfredric/MooX-Lsub"
       }
    },
    "version" : "0.001000",
