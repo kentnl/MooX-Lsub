@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use utf8;
 
-package MooX::LSub;
+package MooX::Lsub;
 
 our $VERSION = '0.001000';
 
@@ -25,7 +25,7 @@ __END__
 
 =head1 NAME
 
-MooX::LSub - # AUTHORITY
+MooX::Lsub - # AUTHORITY
 
 =head1 VERSION
 

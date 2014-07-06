@@ -104,7 +104,7 @@
       }
    },
    "provides" : {
-      "MooX::LSub" : {
+      "MooX::Lsub" : {
          "file" : "lib/MooX/Lsub.pm",
          "version" : "0.001000"
       }

@@ -18,7 +18,7 @@ meta-spec:
   version: '1.4'
 name: MooX-Lsub
 provides:
-  MooX::LSub:
+  MooX::Lsub:
     file: lib/MooX/Lsub.pm
     version: '0.001000'
 requires:
