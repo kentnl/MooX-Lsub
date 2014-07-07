@@ -11,7 +11,6 @@ our $VERSION = '0.001000';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-use Moo;
 
 
 
@@ -113,8 +112,6 @@ sub _make_lsub {
   return $sub;
 }
 
-no Moo;
-
 1;
 
 __END__
@@ -136,7 +133,8 @@ version 0.001000
   use MooX::Lsub;
 
   # Shorthand for
-  # has foo => ( is => ro =>, lazy => 1, builder => sub { "Hello" });
+  # has foo => ( is => ro =>, lazy => 1, builder => '_build_foo' );
+  # sub _build_foo { "Hello" }
 
   lsub foo => sub { "Hello" };
 
