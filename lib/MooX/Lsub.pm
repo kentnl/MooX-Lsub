@@ -46,7 +46,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 
 
-use Eval::Closure;
+use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
 
 ## no critic (TestingAndDebugging::ProhibitNoStrict)
@@ -76,7 +76,7 @@ sub import {
       target  => $target,
       has     => $has,
       options => \@args,
-    }
+    },
   );
 
   $class->_set_sub( $target, 'lsub', $lsub_code );
@@ -103,7 +103,14 @@ sub _make_lsub {
   $code .= q[ } ] . $nl;
   $code .= q[ $class->_set_sub($target, "_build_" . $subname , $sub ); ] . $nl;
   $code .= q[ package ] . $options->{'target'} . q[; ] . $nl;
-  $code .= q[ return $has->( $subname, is => 'ro', lazy => 1, builder => '_build_' . $subname ); ] . $nl;
+  $code .= q[ return $has->( ] . $nl;
+  $code .= q[   $subname, ] . $nl;
+  $code .= q[   ( ] . $nl;
+  $code .= q[     is => 'ro', ] . $nl;
+  $code .= q[     lazy => 1, ] . $nl;
+  $code .= q[     builder => '_build_' . $subname, ] . $nl;
+  $code .= q[   ) ] . $nl; 
+  $code .= q[ ); ] . $nl;
   $code .= q[}] . $nl;
 
   my $sub = eval_closure(
