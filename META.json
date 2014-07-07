@@ -80,6 +80,7 @@
       },
       "runtime" : {
          "requires" : {
+            "Carp" : "0",
             "Eval::Closure" : "0",
             "perl" : "5.008",
             "strict" : "0",
@@ -127,6 +128,7 @@
       "modules" : {
          "CPAN::Meta" : "2.141520",
          "CPAN::Meta::Requirements" : "2.125",
+         "Carp" : "1.34",
          "Dist::Zilla::Plugin::Authority" : "1.006",
          "Dist::Zilla::Plugin::AutoPrereqs" : "5.019",
          "Dist::Zilla::Plugin::BumpVersionAfterRelease" : "0.002",

@@ -109,6 +109,7 @@ my $static_prereqs = do { my $x = {
                     },
        'runtime' => {
                       'requires' => {
+                                      'Carp' => '0',
                                       'Eval::Closure' => '0',
                                       'perl' => '5.008',
                                       'strict' => '0',

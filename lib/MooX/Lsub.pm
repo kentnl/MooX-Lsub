@@ -47,18 +47,20 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 
 use Eval::Closure;
+use Carp qw(croak);
 
 ## no critic (TestingAndDebugging::ProhibitNoStrict)
 sub _get_sub {
   my ( undef, $target, $subname ) = @_;
   no strict 'refs';
-  return \&{ $target . '::' . $subname };
+  return \&{ $target . q[::] . $subname };
 }
 
 sub _set_sub {
   my ( undef, $target, $subname, $code ) = @_;
   no strict 'refs';
-  *{ $target . '::' . $subname } = $code;
+  *{ $target . q[::] . $subname } = $code;
+  return;
 }
 ## use critic
 #
@@ -67,7 +69,7 @@ sub import {
   my $target = caller;
   my $has = $class->_get_sub( $target, 'has' );
 
-  die "No 'has' method in $target. Did you forget to import Moo(se)?" if not $has;
+  croak "No 'has' method in $target. Did you forget to import Moo(se)?" if not $has;
 
   my $lsub_code = $class->_make_lsub(
     {
@@ -85,18 +87,19 @@ sub import {
 sub _make_lsub {
   my ( $class, $options ) = @_;
 
+  ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
   my $nl   = qq[\n];
   my $code = 'sub($$) {' . $nl;
   $code .= q[ package ] . $class . q[; ] . $nl;
   $code .= q[ my ( $subname, $sub , @extras ) = @_; ] . $nl;
   $code .= q[ if ( @extras ) { ] . $nl;
-  $code .= q[   die "Too many arguments to 'lsub'. Did you misplace a ';'?"; ] . $nl;
+  $code .= q[   croak "Too many arguments to 'lsub'. Did you misplace a ';'?"; ] . $nl;
   $code .= q[ } ] . $nl;
   $code .= q[ if ( not defined $subname or not length $subname or ref $subname ) { ] . $nl;
-  $code .= q[   die "Subname must be defined + length + not a ref"; ] . $nl;
+  $code .= q[   croak "Subname must be defined + length + not a ref"; ] . $nl;
   $code .= q[ } ] . $nl;
   $code .= q[ if ( not 'CODE' eq ref $sub ) { ] . $nl;
-  $code .= q[   die "Sub must be a CODE ref"; ] . $nl;
+  $code .= q[   croak "Sub must be a CODE ref"; ] . $nl;
   $code .= q[ } ] . $nl;
   $code .= q[ $class->_set_sub($target, "_build_" . $subname , $sub ); ] . $nl;
   $code .= q[ package ] . $options->{'target'} . q[; ] . $nl;
@@ -111,6 +114,7 @@ sub _make_lsub {
       '$target' => \$options->{'target'},
     },
   );
+  ## use critiic
   return $sub;
 }
 
