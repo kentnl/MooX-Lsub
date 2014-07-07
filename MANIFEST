@@ -23,6 +23,7 @@ t/03-basic-moose-immute.t
 t/04-clean-ns.t
 t/05-autoclean-ns.t
 t/06-expected-fails.t
+t/07-internals-source.t
 weaver.ini
 xt/author/critic.t
 xt/release/cpan-changes.t
