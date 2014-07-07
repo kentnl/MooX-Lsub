@@ -46,6 +46,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 
 
+
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
 
@@ -177,7 +178,8 @@ But switching things to Moo means I usually have to get much uglier, and repeat 
 
 So this module exists as a compromise.
 
-Additionally, I always forgot to declare C<use Moo 1.000008> which was the first version of C<Moo> where C<< builder => sub >> worked, and I would invariably get silly test failures in smokers as a consequence.
+Additionally, I always forgot to declare C<use Moo 1.000008> which was the first version of C<Moo> where
+C<< builder => sub >> worked, and I would invariably get silly test failures in smokers as a consequence.
 
 This module avoids such problem entirely, and is tested to work with C<Moo 0.009001>.
 
