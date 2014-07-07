@@ -1,0 +1,51 @@
+NAME
+    MooX::Lsub - Very shorthand syntax for bulk lazy builders
+
+VERSION
+    version 0.001000
+
+SYNOPSIS
+      use MooX::Lsub;
+
+      # Shorthand for
+      # has foo => ( is => ro =>, lazy => 1, builder => '_build_foo' );
+      # sub _build_foo { "Hello" }
+
+      lsub foo => sub { "Hello" };
+
+DESCRIPTION
+    I often want to use a lot of lazy build subs to implement some plumbing,
+    with scope to allow it to be overridden by people who know what they're
+    doing with an injection library like Bread::Board.
+
+    Usually, the syntax of "Class::Tiny" is what I use for such things.
+
+      use Class::Tiny {
+        'a' => sub { },
+        'b' => sub { },
+      };
+
+    Etc.
+
+    But switching things to Moo means I usually have to get much uglier, and
+    repeat myself a *lot*.
+
+    So this module exists as a compromise.
+
+    Additionally, I always forgot to declare "use Moo 1.000008" which was
+    the first version of "Moo" where "builder => sub" worked, and I would
+    invariably get silly test failures in smokers as a consequence.
+
+    This module avoids such problem entirely, and is tested to work with
+    "Moo 0.009001".
+
+AUTHOR
+    Kent Fredric <kentfredric@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2014 by Kent Fredric
+    <kentfredric@gmail.com>.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
