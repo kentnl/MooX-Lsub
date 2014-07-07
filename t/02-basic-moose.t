@@ -7,6 +7,8 @@ use Test::Requires qw( Moose );
 
 # ABSTRACT: Basic moo test
 
+require Moose;
+
 local $@;
 my $failed = 1;
 eval q[{

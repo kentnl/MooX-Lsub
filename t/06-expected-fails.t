@@ -5,6 +5,7 @@ use warnings;
 use Test::More;
 use Test::Requires qw( Moo );
 
+require Moo;
 my $package_no = 1;
 
 sub failcode {
