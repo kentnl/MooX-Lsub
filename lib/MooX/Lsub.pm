@@ -84,9 +84,8 @@ sub import {
   return;
 }
 
-sub _make_lsub {
-  my ( $class, $options ) = @_;
-
+sub _make_lsub_code {
+  my ($class, $options) = @_;
   ## no critic (ValuesAndExpressions::RequireInterpolationOfMetachars)
   my $nl   = qq[\n];
   my $code = 'sub($$) {' . $nl;
@@ -109,9 +108,16 @@ sub _make_lsub {
   $code .= q[     is => 'ro', ] . $nl;
   $code .= q[     lazy => 1, ] . $nl;
   $code .= q[     builder => '_build_' . $subname, ] . $nl;
-  $code .= q[   ) ] . $nl; 
+  $code .= q[   ) ] . $nl;
   $code .= q[ ); ] . $nl;
   $code .= q[}] . $nl;
+  ## use critic
+  return $code;
+}
+sub _make_lsub {
+  my ( $class, $options ) = @_;
+
+  my $code = $class->_make_lsub_code( $options );
 
   my $sub = eval_closure(
     source      => $code,
@@ -121,7 +127,6 @@ sub _make_lsub {
       '$target' => \$options->{'target'},
     },
   );
-  ## use critiic
   return $sub;
 }
 
