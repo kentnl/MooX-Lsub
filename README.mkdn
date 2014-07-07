@@ -11,7 +11,8 @@ version 0.001000
     use MooX::Lsub;
 
     # Shorthand for
-    # has foo => ( is => ro =>, lazy => 1, builder => sub { "Hello" });
+    # has foo => ( is => ro =>, lazy => 1, builder => '_build_foo' );
+    # sub _build_foo { "Hello" }
 
     lsub foo => sub { "Hello" };
 
@@ -32,6 +33,10 @@ Etc.
 But switching things to Moo means I usually have to get much uglier, and repeat myself a \*lot\*.
 
 So this module exists as a compromise.
+
+Additionally, I always forgot to declare `use Moo 1.000008` which was the first version of `Moo` where `builder => sub` worked, and I would invariably get silly test failures in smokers as a consequence.
+
+This module avoids such problem entirely, and is tested to work with `Moo 0.009001`.
 
 # AUTHOR
 
