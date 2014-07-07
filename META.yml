@@ -87,6 +87,8 @@ x_BuiltWith:
     ExtUtils::MakeMaker: '6.98'
     File::Spec::Functions: '3.48'
     List::Util: '1.39'
+    Moo: '1.005000'
+    Moose: '2.1209'
     Pod::Coverage::TrustPod: '0.100003'
     Test::CPAN::Changes: '0.28'
     Test::CPAN::Meta: '0.23'
@@ -95,6 +97,8 @@ x_BuiltWith:
     Test::Pod: '1.48'
     Test::Pod::Coverage: '1.08'
     Test::Requires: '0.07'
+    namespace::autoclean: '0.19'
+    namespace::clean: '0.25'
     strict: '1.08'
     utf8: '1.14'
     version: '0.9908'
@@ -535,6 +539,32 @@ x_Dist_Zilla:
           type: requires
       name: '@Author::KENTNL/::Role::BundleDeps'
       version: '5.019'
+    -
+      class: Dist::Zilla::Plugin::Prereqs::Soften
+      config:
+        Dist::Zilla::Plugin::Prereqs::Soften:
+          copy_to:
+            - develop.requires
+          modules:
+            - Moo
+          modules_from_features: ~
+          to_relationship: recommends
+      name: 'Moo recommended'
+      version: '0.004000'
+    -
+      class: Dist::Zilla::Plugin::Prereqs::Soften
+      config:
+        Dist::Zilla::Plugin::Prereqs::Soften:
+          copy_to:
+            - develop.requires
+          modules:
+            - Moose
+            - namespace::clean
+            - namespace::autoclean
+          modules_from_features: ~
+          to_relationship: suggests
+      name: 'Moose and friends suggested'
+      version: '0.004000'
     -
       class: Dist::Zilla::Plugin::Prereqs
       config:

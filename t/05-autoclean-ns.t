@@ -14,7 +14,8 @@ use Test::More;
 }
 
 # ABSTRACT: Basic moo + clean namespaces test
-
+require Moo;
+require namespace::autoclean;
 local $@;
 my $failed = 1;
 eval q[{

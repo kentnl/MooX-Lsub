@@ -96,12 +96,16 @@ my $static_prereqs = do { my $x = {
                                       'Dist::Zilla::Plugin::Twitter' => '0',
                                       'Dist::Zilla::Plugin::UploadToCPAN' => '0',
                                       'Dist::Zilla::PluginBundle::Author::KENTNL' => '2.016001',
+                                      'Moo' => '0',
+                                      'Moose' => '0',
                                       'Pod::Coverage::TrustPod' => '0',
                                       'Test::CPAN::Changes' => '0.19',
                                       'Test::CPAN::Meta' => '0',
                                       'Test::Kwalitee' => '1.12',
                                       'Test::Pod' => '1.41',
-                                      'Test::Pod::Coverage' => '1.08'
+                                      'Test::Pod::Coverage' => '1.08',
+                                      'namespace::autoclean' => '0',
+                                      'namespace::clean' => '0'
                                     },
                       'suggests' => {
                                       'Dist::Zilla::PluginBundle::Author::KENTNL::Lite' => 'v1.3.0'
@@ -122,6 +126,7 @@ my $static_prereqs = do { my $x = {
                                      'CPAN::Meta' => '0',
                                      'CPAN::Meta::Requirements' => '2.120900',
                                      'ExtUtils::MakeMaker' => '6.98',
+                                     'Moo' => '0',
                                      'Test::More' => '1.001003'
                                    },
                    'requires' => {
@@ -131,6 +136,11 @@ my $static_prereqs = do { my $x = {
                                    'Test::More' => '0.89',
                                    'Test::Requires' => '0',
                                    'version' => '0'
+                                 },
+                   'suggests' => {
+                                   'Moose' => '0',
+                                   'namespace::autoclean' => '0',
+                                   'namespace::clean' => '0'
                                  }
                  }
      };

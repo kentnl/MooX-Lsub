@@ -5,6 +5,8 @@ use warnings;
 use Test::More;
 use Test::Requires qw( Moo );
 
+require Moo;
+
 # ABSTRACT: Basic moo test
 local $@;
 my $failed = 1;
