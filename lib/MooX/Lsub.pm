@@ -48,6 +48,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Eval::Closure;
 
+## no critic (TestingAndDebugging::ProhibitNoStrict)
 sub _get_sub {
   my ( undef, $target, $subname ) = @_;
   no strict 'refs';
@@ -59,7 +60,8 @@ sub _set_sub {
   no strict 'refs';
   *{ $target . '::' . $subname } = $code;
 }
-
+## use critic
+#
 sub import {
   my ( $class, @args ) = @_;
   my $target = caller;
