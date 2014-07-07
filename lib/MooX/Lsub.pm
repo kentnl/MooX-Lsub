@@ -11,8 +11,6 @@ our $VERSION = '0.001000';
 
 # AUTHORITY
 
-use Moo;
-
 =head1 SYNOPSIS
 
   use MooX::Lsub;
@@ -112,7 +110,5 @@ sub _make_lsub {
   );
   return $sub;
 }
-
-no Moo;
 
 1;
