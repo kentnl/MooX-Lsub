@@ -49,13 +49,13 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Eval::Closure;
 
 sub _get_sub {
-  my ( $class, $target, $subname ) = @_;
+  my ( undef, $target, $subname ) = @_;
   no strict 'refs';
   return \&{ $target . '::' . $subname };
 }
 
 sub _set_sub {
-  my ( $class, $target, $subname, $code ) = @_;
+  my ( undef, $target, $subname, $code ) = @_;
   no strict 'refs';
   *{ $target . '::' . $subname } = $code;
 }
