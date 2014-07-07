@@ -95,7 +95,6 @@ my $static_prereqs = do { my $x = {
                                       'Dist::Zilla::Plugin::TestRelease' => '0',
                                       'Dist::Zilla::Plugin::Twitter' => '0',
                                       'Dist::Zilla::Plugin::UploadToCPAN' => '0',
-                                      'Dist::Zilla::PluginBundle::Author::KENTNL' => '2.016001',
                                       'Moo' => '0',
                                       'Moose' => '0',
                                       'Pod::Coverage::TrustPod' => '0',
@@ -108,7 +107,8 @@ my $static_prereqs = do { my $x = {
                                       'namespace::clean' => '0'
                                     },
                       'suggests' => {
-                                      'Dist::Zilla::PluginBundle::Author::KENTNL::Lite' => 'v1.3.0'
+                                      'Dist::Zilla::App::Command::bakeini' => '0.001000',
+                                      'Dist::Zilla::PluginBundle::Author::KENTNL' => '2.016001'
                                     }
                     },
        'runtime' => {
