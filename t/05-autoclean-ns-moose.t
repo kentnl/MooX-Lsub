@@ -14,7 +14,7 @@ use Test::More;
 }
 
 # ABSTRACT: Basic moose + clean namespaces test
-require Moo;
+require Moose;
 require namespace::autoclean;
 local $@;
 my $failed = 1;

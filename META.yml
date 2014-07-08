@@ -21,7 +21,7 @@ name: MooX-Lsub
 provides:
   MooX::Lsub:
     file: lib/MooX/Lsub.pm
-    version: '0.001000'
+    version: '0.001001'
 requires:
   Carp: '0'
   Eval::Closure: '0'
@@ -33,7 +33,7 @@ resources:
   bugtracker: https://github.com/kentfredric/MooX-Lsub/issues
   homepage: https://github.com/kentfredric/MooX-Lsub
   repository: https://github.com/kentfredric/MooX-Lsub.git
-version: '0.001000'
+version: '0.001001'
 x_BuiltWith:
   modules:
     CPAN::Meta: '2.141520'
@@ -420,7 +420,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: 0
-          tag: 0.001000-source
+          tag: 0.001001-source
           tag_format: '%v-source'
           tag_message: v%v
           time_zone: local
@@ -474,7 +474,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: releases
           signed: 0
-          tag: '0.001000'
+          tag: '0.001001'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
