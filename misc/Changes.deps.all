@@ -1,2 +1,19 @@
-0.001001
+This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL dependencies for all phases (configure/build/runtime/test/develop)
+
+0.001002
+ [Added / test recommends]
+ - CPAN::Meta::Prereqs
+
+ [Added / test requires]
+ - File::Spec
+ - Scalar::Util
+
+ [Changed / develop suggests]
+ - Dist::Zilla::App::Command::bakeini 0.001000 → 0.001001
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.016001 → 2.016004
+
+ [Changed / test requires]
+ - version 0 → 0.77
+
+0.001001 2014-07-08T07:29:43Z
 

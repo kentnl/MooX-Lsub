@@ -49,6 +49,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
+use constant can_haz_subname => eval { require Sub::Name };
 
 ## no critic (TestingAndDebugging::ProhibitNoStrict)
 sub _get_sub {
@@ -61,6 +62,13 @@ sub _set_sub {
   my ( undef, $target, $subname, $code ) = @_;
   no strict 'refs';
   *{ $target . q[::] . $subname } = $code;
+  return;
+}
+
+sub _set_sub_named {
+  my ( undef, $target, $subname, $code ) = @_;
+  no strict 'refs';
+  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Name::subname( $subname, $code ) : $code;
   return;
 }
 ## use critic
@@ -101,7 +109,7 @@ sub _make_lsub_code {
   $code .= q[ if ( not 'CODE' eq ref $sub ) { ] . $nl;
   $code .= q[   croak "Sub must be a CODE ref"; ] . $nl;
   $code .= q[ } ] . $nl;
-  $code .= q[ $class->_set_sub($target, "_build_" . $subname , $sub ); ] . $nl;
+  $code .= q[ $class->_set_sub_named($target, "_build_" . $subname , $sub ); ] . $nl;
   $code .= q[ package ] . $options->{'target'} . q[; ] . $nl;
   $code .= q[ return $has->( ] . $nl;
   $code .= q[   $subname, ] . $nl;

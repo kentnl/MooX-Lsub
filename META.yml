@@ -24,9 +24,12 @@ provides:
   MooX::Lsub:
     file: lib/MooX/Lsub.pm
     version: '0.001002'
+recommends:
+  Sub::Name: '0'
 requires:
   Carp: '0'
   Eval::Closure: '0'
+  constant: '0'
   perl: '5.008'
   strict: '0'
   utf8: '0'
@@ -95,6 +98,7 @@ x_BuiltWith:
     Moose: '2.1210'
     Pod::Coverage::TrustPod: '0.100003'
     Scalar::Util: '1.39'
+    Sub::Name: '0.07'
     Test::CPAN::Changes: '0.28'
     Test::CPAN::Meta: '0.23'
     Test::Kwalitee: '1.19'
@@ -102,6 +106,7 @@ x_BuiltWith:
     Test::Pod: '1.48'
     Test::Pod::Coverage: '1.10'
     Test::Requires: '0.08'
+    constant: '1.31'
     namespace::autoclean: '0.19'
     namespace::clean: '0.25'
     strict: '1.08'
@@ -537,6 +542,18 @@ x_Dist_Zilla:
           type: requires
       name: '@Author::KENTNL/::Role::BundleDeps'
       version: '5.019'
+    -
+      class: Dist::Zilla::Plugin::Prereqs::Soften
+      config:
+        Dist::Zilla::Plugin::Prereqs::Soften:
+          copy_to:
+            - develop.requires
+          modules:
+            - Sub::Name
+          modules_from_features: ~
+          to_relationship: recommends
+      name: Subname
+      version: '0.004000'
     -
       class: Dist::Zilla::Plugin::Prereqs::Soften
       config:
