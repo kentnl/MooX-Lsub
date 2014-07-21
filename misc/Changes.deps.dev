@@ -1,2 +1,12 @@
-0.001001
+This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
+
+0.001002
+ [Added / develop requires]
+ - Sub::Name
+
+ [Changed / develop suggests]
+ - Dist::Zilla::App::Command::bakeini 0.001000 → 0.001001
+ - Dist::Zilla::PluginBundle::Author::KENTNL 2.016001 → 2.016004
+
+0.001001 2014-07-08T07:29:43Z
 

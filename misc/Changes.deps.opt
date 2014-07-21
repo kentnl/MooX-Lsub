@@ -1,2 +1,11 @@
-0.001001
+This file contains changes in OPTIONAL dependencies for standard CPAN phases (configure/build/runtime/test)
+
+0.001002
+ [Added / runtime recommends]
+ - Sub::Name
+
+ [Added / test recommends]
+ - CPAN::Meta::Prereqs
+
+0.001001 2014-07-08T07:29:43Z
 
