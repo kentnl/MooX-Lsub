@@ -5,7 +5,7 @@ use utf8;
 
 package MooX::Lsub;
 
-our $VERSION = '0.001001';
+our $VERSION = '0.001002';
 
 # ABSTRACT: Very shorthand syntax for bulk lazy builders
 
@@ -148,7 +148,7 @@ MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 

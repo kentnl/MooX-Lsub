@@ -1,5 +1,7 @@
 Release history for MooX-LSub
 
+0.001002 2014-07-08T10:23:28Z
+
 0.001001 2014-07-08T07:29:43Z
  [Bugfix]
  - Test failures erroneously if Moo is not installed.
