@@ -1,5 +1,7 @@
 Release history for MooX-LSub
 
+0.001003 2014-07-21T05:15:21Z
+
 0.001002 2014-07-21T05:05:52Z
  [Bugfix]
  - Name the builder sub where possible

@@ -1,6 +1,8 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
-0.001002
+0.001003
+
+0.001002 2014-07-21T05:05:52Z
  [Added / develop requires]
  - Sub::Name
 
