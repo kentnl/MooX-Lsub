@@ -1,9 +1,13 @@
 Release history for MooX-LSub
 
 {{$NEXT}}
+ [Bugfix]
+ - Name the builder sub where possible
+
  [Dependencies::Stats]
  - Dependencies changed since 0.001001, see misc/*.deps* for details
- - develop: (suggests: ↑2)
+ - develop: +1 (suggests: ↑2)
+ - runtime: +1 (recommends: +1)
  - test: +2 ↑1 (recommends: +1)
 
 0.001001 2014-07-08T07:29:43Z

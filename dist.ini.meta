@@ -20,6 +20,11 @@ srcreadme         = mkdn
 twitter_hash_tags = #perl #cpan
 ; auto_prereqs_skip = File::Find
 
+[Prereqs::Soften / Subname]
+module = Sub::Name
+to_relationship = recommends
+copy_to = develop.requires
+
 [Prereqs::Soften / Moo recommended]
 module = Moo
 copy_to = develop.requires
