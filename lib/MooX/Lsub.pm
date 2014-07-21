@@ -49,7 +49,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
-## no critic (ProhibitConstantPragma,RequireCheckingReturnOfEval);
+## no critic (Capitalization,ProhibitConstantPragma,RequireCheckingReturnValueOfEval);
 use constant can_haz_subname => eval { require Sub::Name };
 
 ## no critic (TestingAndDebugging::ProhibitNoStrict)
