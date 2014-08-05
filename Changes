@@ -1,6 +1,19 @@
 Release history for MooX-LSub
 
 {{$NEXT}}
+ [00 Trivial]
+ - CPANDAY!
+ - no code changes.
+ - tests augmented.
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.001002, see misc/*.deps* for details
+ - configure: ↓1
+ - develop: (suggests: ↑1)
+ - test: -4 (recommends: ↑1 -2)
+
+ [Tests]
+ - update Test::ReportPrereqs
 
 0.001002 2014-07-21T05:05:52Z
  [Bugfix]
