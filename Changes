@@ -9,7 +9,7 @@ Release history for MooX-LSub
  [Dependencies::Stats]
  - Dependencies changed since 0.001002, see misc/*.deps* for details
  - configure: ↓1
- - develop: (suggests: ↑1)
+ - develop: +1 (suggests: ↑1)
  - test: -4 (recommends: ↑1 -2)
 
  [Tests]
