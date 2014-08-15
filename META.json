@@ -81,7 +81,7 @@
          },
          "suggests" : {
             "Dist::Zilla::App::Command::bakeini" : "0.001001",
-            "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.017001"
+            "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.017002"
          }
       },
       "runtime" : {
@@ -185,7 +185,7 @@
          "Dist::Zilla::Plugin::TestRelease" : "5.020",
          "Dist::Zilla::Plugin::Twitter" : "0.025",
          "Dist::Zilla::Plugin::UploadToCPAN" : "5.020",
-         "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.017001",
+         "Dist::Zilla::PluginBundle::Author::KENTNL" : "2.017002",
          "Eval::Closure" : "0.11",
          "ExtUtils::MakeMaker" : "6.98",
          "File::Spec" : "3.48",
@@ -796,7 +796,7 @@
                }
             },
             "name" : "Subname",
-            "version" : "0.004000"
+            "version" : "0.004001"
          },
          {
             "class" : "Dist::Zilla::Plugin::Prereqs::Soften",
@@ -813,7 +813,7 @@
                }
             },
             "name" : "Moo recommended",
-            "version" : "0.004000"
+            "version" : "0.004001"
          },
          {
             "class" : "Dist::Zilla::Plugin::Prereqs::Soften",
@@ -832,7 +832,7 @@
                }
             },
             "name" : "Moose and friends suggested",
-            "version" : "0.004000"
+            "version" : "0.004001"
          },
          {
             "class" : "Dist::Zilla::Plugin::Prereqs",
