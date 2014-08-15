@@ -11,42 +11,6 @@ our $VERSION = '0.001003';
 
 # AUTHORITY
 
-=head1 SYNOPSIS
-
-  use MooX::Lsub;
-
-  # Shorthand for
-  # has foo => ( is => ro =>, lazy => 1, builder => '_build_foo' );
-  # sub _build_foo { "Hello" }
-
-  lsub foo => sub { "Hello" };
-
-
-=head1 DESCRIPTION
-
-I often want to use a lot of lazy build subs to implement some plumbing, with scope to allow
-it to be overridden by people who know what they're doing with an injection library like Bread::Board.
-
-Usually, the syntax of C<Class::Tiny> is what I use for such things.
-
-  use Class::Tiny {
-    'a' => sub { },
-    'b' => sub { },
-  };
-
-Etc.
-
-But switching things to Moo means I usually have to get much uglier, and repeat myself a *lot*.
-
-So this module exists as a compromise.
-
-Additionally, I always forgot to declare C<use Moo 1.000008> which was the first version of C<Moo> where
-C<< builder => sub >> worked, and I would invariably get silly test failures in smokers as a consequence.
-
-This module avoids such problem entirely, and is tested to work with C<Moo 0.009001>.
-
-=cut
-
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
 ## no critic (Capitalization,ProhibitConstantPragma,RequireCheckingReturnValueOfEval);
@@ -144,3 +108,39 @@ sub _make_lsub {
 }
 
 1;
+
+=head1 SYNOPSIS
+
+  use MooX::Lsub;
+
+  # Shorthand for
+  # has foo => ( is => ro =>, lazy => 1, builder => '_build_foo' );
+  # sub _build_foo { "Hello" }
+
+  lsub foo => sub { "Hello" };
+
+
+=head1 DESCRIPTION
+
+I often want to use a lot of lazy build subs to implement some plumbing, with scope to allow
+it to be overridden by people who know what they're doing with an injection library like Bread::Board.
+
+Usually, the syntax of C<Class::Tiny> is what I use for such things.
+
+  use Class::Tiny {
+    'a' => sub { },
+    'b' => sub { },
+  };
+
+Etc.
+
+But switching things to Moo means I usually have to get much uglier, and repeat myself a *lot*.
+
+So this module exists as a compromise.
+
+Additionally, I always forgot to declare C<use Moo 1.000008> which was the first version of C<Moo> where
+C<< builder => sub >> worked, and I would invariably get silly test failures in smokers as a consequence.
+
+This module avoids such problem entirely, and is tested to work with C<Moo 0.009001>.
+
+=cut
