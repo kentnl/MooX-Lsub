@@ -1,14 +1,23 @@
 Release history for MooX-LSub
 
-0.001003 2014-08-05T08:41:31Z
+0.001003 2014-08-15T23:13:20Z
  [00 Trivial]
- - update report-versions
+ - CPANDAY!
+ - no code changes.
+ - tests augmented.
+ - whitespace reduced.
 
  [Dependencies::Stats]
  - Dependencies changed since 0.001002, see misc/*.deps* for details
  - configure: ↓1
  - develop: +1 (suggests: ↑1)
  - test: -4 (recommends: ↑1 -2)
+
+ [Misc]
+ - Improve source side POD to reduce build side whitespace.
+
+ [Tests]
+ - update Test::ReportPrereqs
 
 0.001002 2014-07-21T05:05:52Z
  [Bugfix]

@@ -11,42 +11,6 @@ our $VERSION = '0.001003';
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
 ## no critic (Capitalization,ProhibitConstantPragma,RequireCheckingReturnValueOfEval);
