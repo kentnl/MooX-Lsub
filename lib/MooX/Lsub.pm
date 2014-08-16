@@ -5,47 +5,11 @@ use utf8;
 
 package MooX::Lsub;
 
-our $VERSION = '0.001002';
+our $VERSION = '0.001003';
 
 # ABSTRACT: Very shorthand syntax for bulk lazy builders
 
 our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
@@ -157,7 +121,7 @@ MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 SYNOPSIS
 
