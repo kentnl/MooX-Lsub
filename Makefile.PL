@@ -11,7 +11,7 @@ use ExtUtils::MakeMaker ;
 
 my %WriteMakefileArgs = (
   "ABSTRACT" => "Very shorthand syntax for bulk lazy builders",
-  "AUTHOR" => "Kent Fredric <kentfredric\@gmail.com>",
+  "AUTHOR" => "Kent Fredric <kentnl\@cpan.org>",
   "CONFIGURE_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0
   },
@@ -33,7 +33,7 @@ my %WriteMakefileArgs = (
     "Test::More" => "0.89",
     "Test::Requires" => 0
   },
-  "VERSION" => "0.001003",
+  "VERSION" => "0.002000",
   "test" => {
     "TESTS" => "t/*.t t/00-compile/*.t"
   }

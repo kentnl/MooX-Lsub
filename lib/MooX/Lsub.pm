@@ -5,7 +5,7 @@ use utf8;
 
 package MooX::Lsub;
 
-our $VERSION = '0.001003';
+our $VERSION = '0.002000';
 
 # ABSTRACT: Very shorthand syntax for bulk lazy builders
 
@@ -14,7 +14,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
 ## no critic (Capitalization,ProhibitConstantPragma,RequireCheckingReturnValueOfEval);
-use constant can_haz_subname => eval { require Sub::Name };
+use constant can_haz_subname => eval { require Sub::Util };
 
 ## no critic (TestingAndDebugging::ProhibitNoStrict)
 sub _get_sub {
@@ -33,7 +33,7 @@ sub _set_sub {
 sub _set_sub_named {
   my ( undef, $target, $subname, $code ) = @_;
   no strict 'refs';
-  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Name::subname( $target . q[::] . $subname, $code ) : $code;
+  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Util::set_subname( $target . q[::] . $subname, $code ) : $code;
   return;
 }
 ## use critic
@@ -121,7 +121,7 @@ MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 =head1 VERSION
 
-version 0.001003
+version 0.002000
 
 =head1 SYNOPSIS
 
@@ -158,7 +158,7 @@ This module avoids such problem entirely, and is tested to work with C<Moo 0.009
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
