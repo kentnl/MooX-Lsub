@@ -1,6 +1,13 @@
 Release history for MooX-LSub
 
 {{$NEXT}}
+ [00 Minor]
+ - Switch to Sub::Util
+
+ [Dependencies::Stats]
+ - Dependencies changed since 0.001003, see misc/*.deps* for details
+ - develop: +2 ↑1 -1 (suggests: ↑2)
+ - runtime: (recommends: +1 -1)
 
 0.001003 2014-08-15T23:15:29Z
  [00 Trivial]
