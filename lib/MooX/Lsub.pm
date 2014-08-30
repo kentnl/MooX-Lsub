@@ -33,7 +33,7 @@ sub _set_sub {
 sub _set_sub_named {
   my ( undef, $target, $subname, $code ) = @_;
   no strict 'refs';
-  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Util::subname( $target . q[::] . $subname, $code ) : $code;
+  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Util::set_subname( $target . q[::] . $subname, $code ) : $code;
   return;
 }
 ## use critic
