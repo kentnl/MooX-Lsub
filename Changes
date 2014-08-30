@@ -1,6 +1,8 @@
 Release history for MooX-LSub
 
 {{$NEXT}}
+
+0.002000 2014-08-30T11:24:12Z
  [00 Minor]
  - Switch to Sub::Util
 
