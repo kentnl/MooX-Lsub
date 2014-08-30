@@ -22,7 +22,6 @@ my %WriteMakefileArgs = (
   "PREREQ_PM" => {
     "Carp" => 0,
     "Eval::Closure" => 0,
-    "Sub::Util" => 0,
     "constant" => 0,
     "strict" => 0,
     "utf8" => 0,
@@ -34,7 +33,7 @@ my %WriteMakefileArgs = (
     "Test::More" => "0.89",
     "Test::Requires" => 0
   },
-  "VERSION" => "0.001004",
+  "VERSION" => "0.002000",
   "test" => {
     "TESTS" => "t/*.t t/00-compile/*.t"
   }
@@ -46,7 +45,6 @@ my %FallbackPrereqs = (
   "Eval::Closure" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
-  "Sub::Util" => 0,
   "Test::More" => "0.89",
   "Test::Requires" => 0,
   "constant" => 0,
