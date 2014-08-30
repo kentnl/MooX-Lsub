@@ -14,7 +14,7 @@ our $AUTHORITY = 'cpan:KENTNL'; # AUTHORITY
 use Eval::Closure qw(eval_closure);
 use Carp qw(croak);
 ## no critic (Capitalization,ProhibitConstantPragma,RequireCheckingReturnValueOfEval);
-use constant can_haz_subname => eval { require Sub::Name };
+use constant can_haz_subname => eval { require Sub::Util };
 
 ## no critic (TestingAndDebugging::ProhibitNoStrict)
 sub _get_sub {
@@ -33,7 +33,7 @@ sub _set_sub {
 sub _set_sub_named {
   my ( undef, $target, $subname, $code ) = @_;
   no strict 'refs';
-  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Name::subname( $target . q[::] . $subname, $code ) : $code;
+  *{ $target . q[::] . $subname } = can_haz_subname ? Sub::Util::subname( $target . q[::] . $subname, $code ) : $code;
   return;
 }
 ## use critic

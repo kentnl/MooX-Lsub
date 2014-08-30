@@ -56,7 +56,6 @@ do { my $x = {
                                       'Moo' => '0',
                                       'Moose' => '0',
                                       'Pod::Coverage::TrustPod' => '0',
-                                      'Sub::Name' => '0',
                                       'Test::CPAN::Changes' => '0.19',
                                       'Test::CPAN::Meta' => '0',
                                       'Test::Kwalitee' => '1.21',
@@ -71,12 +70,10 @@ do { my $x = {
                                     }
                     },
        'runtime' => {
-                      'recommends' => {
-                                        'Sub::Name' => '0'
-                                      },
                       'requires' => {
                                       'Carp' => '0',
                                       'Eval::Closure' => '0',
+                                      'Sub::Util' => '0',
                                       'constant' => '0',
                                       'perl' => '5.008',
                                       'strict' => '0',
