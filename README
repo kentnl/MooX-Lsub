@@ -2,7 +2,7 @@ NAME
     MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 VERSION
-    version 0.002000
+    version 0.002001
 
 SYNOPSIS
       use MooX::Lsub;
