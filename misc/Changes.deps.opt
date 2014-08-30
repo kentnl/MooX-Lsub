@@ -1,6 +1,9 @@
 This file contains changes in OPTIONAL dependencies for standard CPAN phases (configure/build/runtime/test)
 
-0.001004
+0.002000
+ [Added / runtime recommends]
+ - Sub::Util
+
  [Removed / runtime recommends]
  - Sub::Name
 

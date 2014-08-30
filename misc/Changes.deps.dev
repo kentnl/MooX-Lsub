@@ -1,8 +1,9 @@
 This file contains changes to DEVELOPMENT dependencies only ( both REQUIRED and OPTIONAL )
 
-0.001004
+0.002000
  [Added / develop requires]
  - Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes 0.001001
+ - Sub::Util
 
  [Changed / develop requires]
  - Test::Kwalitee 1.12 → 1.21

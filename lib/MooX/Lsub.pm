@@ -158,7 +158,7 @@ This module avoids such problem entirely, and is tested to work with C<Moo 0.009
 
 =head1 AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 

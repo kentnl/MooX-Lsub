@@ -1,10 +1,11 @@
 This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL dependencies for all phases (configure/build/runtime/test/develop)
 
-0.001004
+0.002000
  [Added / develop requires]
  - Dist::Zilla::Plugin::Author::KENTNL::RecommendFixes 0.001001
+ - Sub::Util
 
- [Added / runtime requires]
+ [Added / runtime recommends]
  - Sub::Util
 
  [Changed / develop requires]
