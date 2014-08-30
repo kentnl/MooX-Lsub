@@ -8,8 +8,7 @@ copyright_holder = Kent Fredric <kentfredric@gmail.com>
 ; [Bootstrap::lib]
 
 [@Author::KENTNL]
-:version          = 2.016001
-git_versions      = 1
+:version          = 2.020
 normal_form       = numify
 mantissa          = 6
 toolkit           = eumm
