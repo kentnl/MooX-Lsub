@@ -41,7 +41,7 @@ This module avoids such problem entirely, and is tested to work with `Moo 0.0090
 
 # AUTHOR
 
-Kent Fredric <kentfredric@gmail.com>
+Kent Fredric <kentnl@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
