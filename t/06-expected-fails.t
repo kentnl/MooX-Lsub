@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 4;
 use Test::Requires qw( Moo );
 
 require Moo;
@@ -43,6 +43,3 @@ failcode "No args" => q[
   use MooX::Lsub;
   lsub;
 ];
-
-done_testing;
-
