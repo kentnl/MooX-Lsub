@@ -1,5 +1,7 @@
 Release history for MooX-LSub
 
+0.002002 2017-03-03T14:18:17Z fac06c0
+
 0.002001 2017-03-03T12:23:13Z 6a03f10
  [Bugfix]
  - Avoid test failures on 5.26 w/ -Ddefault_inc_excludes_dot
