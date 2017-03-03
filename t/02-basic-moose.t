@@ -1,9 +1,8 @@
-
 use strict;
 use warnings;
 
+use Test::Needs qw( Moose );
 use Test::More tests => 3;
-use Test::Requires qw( Moose );
 
 # ABSTRACT: Basic moo test
 

@@ -126,7 +126,7 @@
             "ExtUtils::MakeMaker" : "0",
             "File::Spec" : "0",
             "Test::More" : "0",
-            "Test::Requires" : "0",
+            "Test::Needs" : "0",
             "perl" : "5.008"
          },
          "suggests" : {

@@ -2,8 +2,8 @@
 use strict;
 use warnings;
 
+use Test::Needs qw( Moo );
 use Test::More tests => 4;
-use Test::Requires qw( Moo );
 
 require Moo;
 my $package_no = 1;

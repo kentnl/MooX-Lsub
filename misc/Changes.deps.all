@@ -27,6 +27,7 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Moose 2.000
 
  [Added / test requires]
+ - Test::Needs
  - perl 5.008
 
  [Changed / configure recommends]
@@ -54,6 +55,9 @@ This file contains ALL changes in dependencies in both REQUIRED / OPTIONAL depen
  - Dist::Zilla::Plugin::EOLTests
  - Dist::Zilla::Plugin::MetaYAML
  - Dist::Zilla::Plugin::ReadmeFromPod
+
+ [Removed / test requires]
+ - Test::Requires
 
 0.002000 2014-08-30T11:24:12Z
  [Added / develop requires]

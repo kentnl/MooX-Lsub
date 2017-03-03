@@ -2,16 +2,8 @@
 use strict;
 use warnings;
 
+use Test::Needs qw( Moose namespace::clean );
 use Test::More tests => 3;
-
-{
-
-  package NotMain;
-
-  # namespace::clean->import() messes up compling context and nukes
-  # done_testing ...
-  use Test::Requires qw( Moose namespace::clean );
-}
 
 # ABSTRACT: Basic moose + clean namespaces test
 require Moose;
