@@ -4,7 +4,7 @@ MooX::Lsub - Very shorthand syntax for bulk lazy builders
 
 # VERSION
 
-version 0.002001
+version 0.002002
 
 # SYNOPSIS
 
