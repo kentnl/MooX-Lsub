@@ -2,16 +2,8 @@
 use strict;
 use warnings;
 
+use Test::Needs qw( Moo namespace::autoclean );
 use Test::More tests => 3;
-
-{
-
-  package NotMain;
-
-  # namespace::autoclean->import() messes up compling context and nukes
-  # done_testing, is, etc....
-  use Test::Requires qw( Moo namespace::autoclean );
-}
 
 # ABSTRACT: Basic moo + clean namespaces test
 require Moo;

@@ -1,12 +1,10 @@
 
 use strict;
 use warnings;
-
+use Test::Needs qw( Moo );
 use Test::More tests => 3;
-use Test::Requires qw( Moo );
 
 require Moo;
-
 # ABSTRACT: Basic moo test
 local $@;
 my $failed = 1;
