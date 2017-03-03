@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 6;
 
 require MooX::Lsub;
 
@@ -42,6 +42,3 @@ is_deeply( \@last_call, [ robert =>, is => 'ro', lazy => 1, builder => '_build_r
 is( $last_caller, 'Boris', "Caller called from package Boris" );
 
 can_ok( 'Boris', '_build_robert' );
-
-done_testing;
-

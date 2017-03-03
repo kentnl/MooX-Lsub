@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-use Test::More;
+use Test::More tests => 3;
 use Test::Requires qw( Moo );
 
 require Moo;
@@ -22,6 +22,3 @@ eval q[{
 ok( !$failed, 'No Exceptions' ) or diag $@;
 is( Sample->new()->method,    5, 'Injected lazy method returns value' );
 is( Sample->new()->methodtwo, 6, 'Injected lazy method returns value' );
-
-done_testing;
-
