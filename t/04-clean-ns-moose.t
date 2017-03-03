@@ -2,16 +2,8 @@
 use strict;
 use warnings;
 
-use Test::More;
-
-{
-
-  package NotMain;
-
-  # namespace::clean->import() messes up compling context and nukes
-  # done_testing ...
-  use Test::Requires qw( Moose namespace::clean );
-}
+use Test::Needs qw( Moose namespace::clean );
+use Test::More tests => 3;
 
 # ABSTRACT: Basic moose + clean namespaces test
 require Moose;
@@ -32,6 +24,3 @@ eval q[{
 ok( !$failed, 'No Exceptions' ) or diag $@;
 is( Sample->new()->method,    5, 'Injected lazy method returns value' );
 is( Sample->new()->methodtwo, 6, 'Injected lazy method returns value' );
-
-done_testing;
-

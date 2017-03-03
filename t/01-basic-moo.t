@@ -1,12 +1,10 @@
 
 use strict;
 use warnings;
-
-use Test::More;
-use Test::Requires qw( Moo );
+use Test::Needs qw( Moo );
+use Test::More tests => 3;
 
 require Moo;
-
 # ABSTRACT: Basic moo test
 local $@;
 my $failed = 1;
@@ -22,6 +20,3 @@ eval q[{
 ok( !$failed, 'No Exceptions' ) or diag $@;
 is( Sample->new()->method,    5, 'Injected lazy method returns value' );
 is( Sample->new()->methodtwo, 6, 'Injected lazy method returns value' );
-
-done_testing;
-

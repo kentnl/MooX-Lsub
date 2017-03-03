@@ -1,51 +1,51 @@
-NAME
-    MooX::Lsub - Very shorthand syntax for bulk lazy builders
+MooX::Lsub
 
-VERSION
-    version 0.002000
+I often want to use a lot of lazy build subs to implement some plumbing,
+with scope to allow it to be overridden by people who know what they're
+doing with an injection library like Bread::Board.
 
-SYNOPSIS
-      use MooX::Lsub;
+Usually, the syntax of "Class::Tiny" is what I use for such things.
 
-      # Shorthand for
-      # has foo => ( is => ro =>, lazy => 1, builder => '_build_foo' );
-      # sub _build_foo { "Hello" }
+  use Class::Tiny {
+    'a' => sub { },
+    'b' => sub { },
+  };
 
-      lsub foo => sub { "Hello" };
+Etc.
 
-DESCRIPTION
-    I often want to use a lot of lazy build subs to implement some plumbing,
-    with scope to allow it to be overridden by people who know what they're
-    doing with an injection library like Bread::Board.
+But switching things to Moo means I usually have to get much uglier, and
+repeat myself a *lot*.
 
-    Usually, the syntax of "Class::Tiny" is what I use for such things.
+So this module exists as a compromise.
 
-      use Class::Tiny {
-        'a' => sub { },
-        'b' => sub { },
-      };
+Additionally, I always forgot to declare "use Moo 1.000008" which was
+the first version of "Moo" where "builder => sub" worked, and I would
+invariably get silly test failures in smokers as a consequence.
 
-    Etc.
+This module avoids such problem entirely, and is tested to work with
+"Moo 0.009001".
 
-    But switching things to Moo means I usually have to get much uglier, and
-    repeat myself a *lot*.
+INSTALLATION
 
-    So this module exists as a compromise.
+This is a Perl module distribution. It should be installed with whichever
+tool you use to manage your installation of Perl, e.g. any of
 
-    Additionally, I always forgot to declare "use Moo 1.000008" which was
-    the first version of "Moo" where "builder => sub" worked, and I would
-    invariably get silly test failures in smokers as a consequence.
+  cpanm .
+  cpan  .
+  cpanp -i .
 
-    This module avoids such problem entirely, and is tested to work with
-    "Moo 0.009001".
+Consult http://www.cpan.org/modules/INSTALL.html for further instruction.
+Should you wish to install this module manually, the procedure is
 
-AUTHOR
-    Kent Fredric <kentnl@cpan.org>
+  perl Makefile.PL
+  make
+  make test
+  make install
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2014 by Kent Fredric
-    <kentfredric@gmail.com>.
 
-    This is free software; you can redistribute it and/or modify it under
-    the same terms as the Perl 5 programming language system itself.
+This software is copyright (c) 2017 by Kent Fredric
+<kentfredric@gmail.com>.
 
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.

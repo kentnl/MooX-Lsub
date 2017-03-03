@@ -2,8 +2,8 @@
 use strict;
 use warnings;
 
-use Test::More;
-use Test::Requires qw( Moo );
+use Test::Needs qw( Moo );
+use Test::More tests => 4;
 
 require Moo;
 my $package_no = 1;
@@ -43,6 +43,3 @@ failcode "No args" => q[
   use MooX::Lsub;
   lsub;
 ];
-
-done_testing;
-
